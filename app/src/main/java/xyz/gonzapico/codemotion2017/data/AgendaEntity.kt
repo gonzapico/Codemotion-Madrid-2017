@@ -3,26 +3,26 @@ package xyz.gonzapico.codemotion2017.data
 /**
  * Created by gonzapico on 30/10/2017.
  */
-class CodemotionAPIResponse(
+data class CodemotionAPIResponse(
     val id: Long,
     val published: Boolean,
     val feedBackEnabled: Boolean,
     val days: List<AgendaDay>
 )
 
-class AgendaDay(
+data class AgendaDay(
     val id: Long,
     val name: String,
     val tracks: List<Track>
 )
 
-class Track(
+data class Track(
     val id: Long,
     val name: String,
     val slots: List<Slot>
 )
 
-class Slot(
+data class Slot(
     val id: Long,
     val name: String,
     val start: String,
@@ -31,7 +31,7 @@ class Slot(
     val trackId: Long,
     val contents: Contents)
 
-class Contents(
+data class Contents(
     val type : String,
     val id : Long,
     val title : String,
@@ -45,11 +45,11 @@ class Contents(
     val feedback: Feedback
 )
 
-class Tag(
+data class Tag(
     val format : List<String>
 )
 
-class Author(
+data class Author(
     val id : Long,
     val uuid : String,
     val name : String,
@@ -58,7 +58,7 @@ class Author(
     val feedback : Feedback
 )
 
-class Feedback(
+data class Feedback(
     val ratingAverage : Int,
     val entriesCount : Int
 )
